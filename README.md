@@ -1,5 +1,8 @@
 # Student-performance-evaluation
 
+Download using git ---> git clone https://github.com/milan2milan/Student-performance-evaluation.git
+GUI using --> Download zip
+
 #steps 
 1. Install Required Software
 
@@ -42,50 +45,9 @@ student_performance
 
 Click SQL tab and run:
 
-CREATE TABLE students (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    student_id VARCHAR(20) UNIQUE,
-    name VARCHAR(100)
-);
-
-CREATE TABLE semester_marks (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    student_id VARCHAR(20),
-    semester VARCHAR(20),
-    marks INT
-);
-6. Insert Sample Data
-
-Run:
-
-INSERT INTO students(student_id,name)
-VALUES
-('ST101','Rohit Dey');
-
-INSERT INTO semester_marks(student_id,semester,marks)
-VALUES
-('ST101','1st Sem',70),
-('ST101','2nd Sem',60),
-('ST101','3rd Sem',20),
-('ST101','4th Sem',10),
-('ST101','5th Sem',40),
-('ST101','6th Sem',50);
-
-
-
-
-
-
-
-
-
-
-
-
-
 To ensure that only registered students can have semester records, use a Foreign Key relationship between the students table and semester_records table.
 
-1. Create Students Table
+5.1. Create Students Table
 CREATE TABLE students (
 
 id INT AUTO_INCREMENT PRIMARY KEY,
@@ -107,7 +69,7 @@ department VARCHAR(50),
 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 
 );
-2. Create Semester Records Table with Foreign Key
+5.2. Create Semester Records Table with Foreign Key
 CREATE TABLE semester_records (
 
 id INT AUTO_INCREMENT PRIMARY KEY,
@@ -138,3 +100,5 @@ UNIQUE KEY unique_student_semester
 (student_id, semester)
 
 );
+
+Run your code --> http://localhost/Project/
